@@ -13,9 +13,9 @@ object policia {
 
 class Bot {
 
-    method responder(tweet, usuario) {
-        return ""
-    }
+  method responder(tweet, usuario) {
+    return ""
+  }
 }
 
 
@@ -94,5 +94,25 @@ object pdtwitter {
         palabra => palabra.contains("@")
       })
     })
+}
+
+class Imagen {
+  const nombre
+  const tamanoBytes
+
+  method nombre() = nombre
+  method tamanoBytes() = tamanoBytes
+}
+class Tweet {
+  const palabras = []
+  const imagen = ""
+
+  method palabras() = palabras
+  method imagen() = imagen
+  method tieneImagen() = not (imagen == "")
+
+  method contains(palabra) = palabras.contains(palabra)
+  method any(bloque) = palabras.any(bloque)
+  method size() = palabras.size()
 }
 
